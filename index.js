@@ -38,6 +38,13 @@ function CalcularNotas() {
     return;
   } else {
     notaF = n1 + n2 + n3;
+    if (notaF < 60) {
+      document.getElementById("mensajeAprobacion").value = "Reprobado";
+    } else if (notaF >= 60 && notaF <= 79) {
+      document.getElementById("mensajeAprobacion").value = "Bueno";
+    } else if (notaF >= 80 && notaF <= 89) {
+      document.getElementById("mensajeAprobacion").value = "Muy Bueno";
+    } else document.getElementById("mensajeAprobacion").value = "Sobresaliente";
     document.getElementById("notaFinal").value = notaF;
   }
 }
